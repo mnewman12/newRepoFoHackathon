@@ -51,6 +51,8 @@ func main() {
 
 	r := gin.Default()
 	r.Use(static.Serve("/", static.LocalFile("./vmwareapp/dist", false)))
+	r.Use(static.Serve("/discover", static.LocalFile("./discover-vue/dist", false)))
+	//use above line multiple times
 	// r.GET("/api/todos", GetTodos)
 	// r.POST("/api/todos", PostTodo)
 	// r.DELETE("/api/todos/:id", DeleteTodo)
